@@ -1,6 +1,8 @@
 # Calculator
 
-Written with React Hooks as replacement for Redux.
+Written with `React Hooks'` reducers as replacement for `Redux`. Tested with `Enzyme`.
+
+![react-calculator](./public/react-calculator.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
