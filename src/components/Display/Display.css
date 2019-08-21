@@ -1,0 +1,11 @@
+.display {
+  text-align: right;
+  font-size: 36px;
+  padding: 5px;
+  margin: 2px;
+  margin-bottom: 5px;
+  height: 48px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
