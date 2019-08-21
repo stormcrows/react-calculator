@@ -28,7 +28,7 @@ it("returns provided state when type other than 'clear'", () => {
 
 it("should reset all but mem register", () => {
   const state = rootReducer(
-    { display: "123", num1: 123, op: "*", num2, mem: 123 },
+    { display: "123", num1: 123, op: "*", num2: 321, mem: 123 },
     { type: "clear", payload: "CLEAR" }
   );
 
