@@ -1,4 +1,6 @@
-# Calculator
+# React-Calculator
+
+[![CircleCI](https://circleci.com/gh/stormcrows/react-calculator.svg?style=svg)](https://circleci.com/gh/stormcrows/react-calculator)
 
 Written with `React Hooks'` reducers as replacement for `Redux`. Tested with `Enzyme`.
 
