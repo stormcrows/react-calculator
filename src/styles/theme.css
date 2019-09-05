@@ -49,7 +49,7 @@ input:focus {
 }
 
 .shadow {
-  -moz-box-shadow: 1px 1px 10px 1px #004;
-  -webkit-box-shadow: 1px 1px 10px 1px #004;
-  box-shadow: 5px 8px 15px 1px #004;
+  -moz-box-shadow: 1px 1px 10px 1px #000;
+  -webkit-box-shadow: 1px 1px 10px 1px #000;
+  box-shadow: 5px 8px 15px 1px #000;
 }
