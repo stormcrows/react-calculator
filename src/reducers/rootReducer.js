@@ -5,18 +5,14 @@ const getInitialState = () => ({
   num2: undefined,
   putDot: false,
   mem: undefined
-});
+})
 
-export default function rootReducer(
-  state = getInitialState(),
-  { type, payload } = {}
-) {
-  if (type !== "clear") return state;
-  switch (payload) {
+export default function rootReducer(state = getInitialState(), { type } = {}) {
+  switch (type) {
     case "CLEAR":
-      return { ...rootReducer(), mem: state.mem };
+      return { ...rootReducer(), mem: state.mem }
 
     default:
-      return state;
+      return state
   }
 }

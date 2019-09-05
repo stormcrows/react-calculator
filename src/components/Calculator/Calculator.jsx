@@ -1,6 +1,6 @@
-import React, { useReducer } from "react";
-import AppContext from "../../AppContext";
-import { Display, Key } from "..";
+import React, { useReducer } from "react"
+import AppContext from "../../AppContext"
+import { Display, Key } from ".."
 import {
   combineReducers,
   memoryReducer,
@@ -8,20 +8,20 @@ import {
   operateReducer,
   operatorReducer,
   rootReducer
-} from "../../reducers";
-import "./Calculator.css";
+} from "../../reducers"
+import "./Calculator.css"
 
 const Calculator = () => {
   const [state, dispatch] = useReducer(
     combineReducers([
+      rootReducer,
       numbersReducer,
-      memoryReducer,
-      operateReducer,
       operatorReducer,
-      rootReducer
+      operateReducer,
+      memoryReducer
     ]),
     rootReducer()
-  );
+  )
 
   return (
     <AppContext.Provider value={dispatch}>
@@ -31,46 +31,42 @@ const Calculator = () => {
         <div className="grid-3-1">
           <div className="grid-1-3">
             <div className="grid-4-3">
-              <Key value={7} type="numbers" />
-              <Key value={8} type="numbers" />
-              <Key value={9} type="numbers" />
-              <Key value={4} type="numbers" />
-              <Key value={5} type="numbers" />
-              <Key value={6} type="numbers" />
-              <Key value={3} type="numbers" />
-              <Key value={2} type="numbers" />
-              <Key value={1} type="numbers" />
-              <Key value={0} type="numbers" />
-              <Key value="." type="operator" />
-              <Key value="=" type="operate" />
+              <Key type={7} />
+              <Key type={8} />
+              <Key type={9} />
+              <Key type={4} />
+              <Key type={5} />
+              <Key type={6} />
+              <Key type={3} />
+              <Key type={2} />
+              <Key type={1} />
+              <Key type={0} />
+              <Key type="." />
+              <Key type="=" />
             </div>
 
             <div className="grid-4-1">
-              <Key value="+" type="operator" />
-              <Key value="-" type="operator" />
-              <Key value="*" type="operator" />
-              <Key value="/" type="operator" />
+              <Key type="+" />
+              <Key type="-" />
+              <Key type="*" />
+              <Key type="/" />
             </div>
 
             <div className="grid-4-1">
-              <Key value="+/-" type="operator" />
-              <Key value="M" type="memory" />
-              <Key value="M+" type="memory" />
-              <Key
-                value="MR"
-                type="memory"
-                disabled={state.mem === undefined}
-              />
+              <Key type="+/-" />
+              <Key type="M" />
+              <Key type="M+" />
+              <Key type="MR" disabled={state.mem === undefined} />
             </div>
           </div>
           <div className="grid-1-2-bottom">
-            <Key value="CLEAR" type="clear" />
-            <Key value="MC" type="memory" disabled={state.mem === undefined} />
+            <Key type="CLEAR" />
+            <Key type="MC" disabled={state.mem === undefined} />
           </div>
         </div>
       </div>
     </AppContext.Provider>
-  );
-};
+  )
+}
 
-export default Calculator;
+export default Calculator
